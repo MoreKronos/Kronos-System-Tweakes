@@ -13,7 +13,7 @@ Kronos Preformance Tweaks is a collection of PowerShell scripts designed to opti
 - `loader.bat`: The batch file that serves as the main interface for running the PowerShell scripts
 - `tweak.ps1`: Applies performance optimizations.
 - `untweak.ps1`: Reverts the optimizations to default settings.
-- 
+  
 ## Download Here
 [Press Here To Download](https://github.com/MoreKronos/Kronos-Preformance-Tweakes/releases/tag/tweak)
 
