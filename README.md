@@ -1,4 +1,4 @@
-# Kronos-Preformance-Tweakes
+# Kronos-System-Tweakes
 
 Kronos Preformance Tweaks is a collection of PowerShell scripts designed to optimize Windows performance by applying various system tweaks. This project provides an easy-to-use interface through a batch script, allowing users to apply or revert tweaks as needed.
 
