@@ -1,5 +1,5 @@
 @echo off
-title Kronos Preformance Tweaks
+title Kronos System Tweaks
 
 color 4
 rem Check for administrative privileges
@@ -12,8 +12,7 @@ if %errorLevel% NEQ 0 (
 color f
 :load
 echo ==================================
-echo Welcome to Kronos Preformance Tweaks!
-echo These Tweaks Are For Preformance Only.
+echo Welcome to Kronos System Tweaks!
 echo ==================================
 echo To tweak the system, type "tweak"
 echo To revert tweaks, type "untweak"
@@ -25,18 +24,21 @@ set "tweakScriptPath=%scriptFolder%\tweak.ps1"
 set "untweakScriptPath=%scriptFolder%\untweak.ps1"
 
 if /i "%choice%"=="tweak" (
+	clear
     echo Applying system tweaks...
     powershell -ExecutionPolicy Bypass -File "%tweakScriptPath%"
-	timeout /t 7 /nobreak > nul
+	timeout /t 5 /nobreak > nul
     goto RestartPrompt
 )
 
 if /i "%choice%"=="untweak" (
+	clear
     echo Reverting system tweaks...
     powershell -ExecutionPolicy Bypass -File "%untweakScriptPath%"
-	timeout /t 7 /nobreak > nul
+	timeout /t 5 /nobreak > nul
     goto RestartPrompt
 )
+
 
 echo Invalid option.
 clear
@@ -45,6 +47,7 @@ goto load
 
 :RestartPrompt
 echo.
+clear
 set /p restart="Do you want to restart your computer now? (Y/N): "
 if /i "%restart%"=="Y" (
     echo Restarting the computer...
